@@ -1,0 +1,24 @@
+# Startup Routine
+AddCharset utf-8 .css
+AddCharset utf-8 .js
+AddCharset utf-8 .txt
+AddCharset utf-8 .xml
+AddDefaultCharset utf-8
+AddOutputFilterByType DEFLATE application/xml text/css text/html text/javascript text/plain
+ContentDigest On
+DefaultLanguage de
+ExpiresActive On
+ExpiresByType application/javascript A86400
+ExpiresByType image/gif A604800
+ExpiresByType image/jpeg A604800
+ExpiresByType image/png A604800
+ExpiresByType text/css A86400
+FileETag All
+
+# Course Calibration
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{HTTPS} !=on [OR]
+	RewriteCond %{HTTP_HOST} !^earthaidsolutions\.org$ [NC]
+	RewriteRule ^ https://earthaidsolutions.org%{REQUEST_URI} [R=301,L]
+</IfModule>
