@@ -45,9 +45,13 @@ footer p:first-child {
 	text-align: right;
 }
 
-footer p:last-child {
+footer p:nth-last-child(-n+2) {
 	padding-left: .5em;
 	text-align: left;
+}
+
+footer p:last-child {
+	margin-top: 1.5em;
 }
 
 img {
@@ -76,6 +80,10 @@ a#action {
 		padding: 0 !important;
 		text-align: center !important;
 		width: 100%;
+	}
+
+	footer p:last-child {
+		margin-top: 0;
 	}
 
 }
