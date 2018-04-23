@@ -54,6 +54,12 @@ footer p:last-child {
 	margin-top: 1.5em;
 }
 
+footer a img {
+	display: block;
+	height: 35px;
+	width: 129px;
+}
+
 img {
 	margin: 0 0 1em;
 	width: 200px;
@@ -84,6 +90,10 @@ a#action {
 
 	footer p:last-child {
 		margin-top: 0;
+	}
+
+	footer a img {
+		margin: auto;
 	}
 
 }
