@@ -1,4 +1,5 @@
 html,
+footer ul,
 p {
 	margin: 0;
 	padding: 0;
@@ -21,10 +22,14 @@ body {
 	padding: 4em 1em 1em;
 }
 
+header,
+section#privacy h2 {
+	font-weight: 300;
+}
+
 header {
 	color: #036;
 	font-size: 1.5em;
-	font-weight: 300;
 }
 
 header p {
@@ -35,33 +40,52 @@ footer {
 	overflow: hidden;
 }
 
-footer p {
+footer section,
+footer ul {
 	float: left;
 	width: calc(50% - .5em);
 }
 
-footer p:first-child {
+footer section {
 	padding-right: .5em;
 	text-align: right;
 }
 
-footer p:nth-last-child(-n+2) {
-	padding-left: .5em;
+footer section p,
+img {
+	margin: 0 0 1em;
+}
+
+footer ul,
+section#privacy {
 	text-align: left;
 }
 
-footer p:last-child {
-	margin-top: 1.5em;
+footer ul {
+	float: right;
+	list-style: none;
+	padding: 0 0 0 .5em;
+}
+
+footer a img,
+section#privacy:target {
+	display: block;
 }
 
 footer a img {
-	display: block;
 	height: 35px;
 	width: 129px;
 }
 
+section#privacy {
+	display: none;
+}
+
+section#privacy * {
+	font-weight: 400;
+}
+
 img {
-	margin: 0 0 1em;
 	width: 200px;
 }
 
@@ -81,15 +105,12 @@ a#action {
 		padding-top: 2em;
 	}
 
-	footer p {
+	footer section,
+	footer ul {
 		float: none;
-		padding: 0 !important;
-		text-align: center !important;
+		padding: 0;
+		text-align: center;
 		width: 100%;
-	}
-
-	footer p:last-child {
-		margin-top: 0;
 	}
 
 	footer a img {
