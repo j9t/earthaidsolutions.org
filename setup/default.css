@@ -33,7 +33,7 @@ header {
 }
 
 header p {
-	margin: -.5em 0 0;
+	margin: .5em 0 0;
 }
 
 footer {
@@ -60,9 +60,13 @@ section#privacy {
 	text-align: left;
 }
 
+footer ul,
+section#privacy > ul {
+	list-style: none;
+}
+
 footer ul {
 	float: right;
-	list-style: none;
 	padding: 0 0 0 .5em;
 }
 
@@ -86,6 +90,11 @@ section#privacy * {
 
 section#privacy p {
 	margin: 1em 0;
+}
+
+section#privacy > ul {
+	margin-left: 0;
+	padding: 0;
 }
 
 img {
